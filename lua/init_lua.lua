@@ -61,4 +61,5 @@ require('c_treesitter')
 require('c_lualine')
 require('c_bufferline')
 require('c_tree')
+require('c_presence')
 

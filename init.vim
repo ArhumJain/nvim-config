@@ -45,6 +45,7 @@ Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'williamboman/mason.nvim'
 Plug 'andweeb/presence.nvim'
+Plug 'mhinz/vim-startify'
 call plug#end()
 
 lua require("init_lua")
