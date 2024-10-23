@@ -16,8 +16,8 @@ local config = function()
       ['<C-Space>'] = cmp.mapping.complete(),
       ['<C-e>'] = cmp.mapping.abort(),
       ['<Tab>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-      ['<S-k>'] = cmp.mapping.select_prev_item(), -- Previous suggestion
-      ['<S-j>'] = cmp.mapping.select_next_item(), -- Next item
+      ['<C-k>'] = cmp.mapping.select_prev_item(), -- Previous suggestion
+      ['<C-j>'] = cmp.mapping.select_next_item(), -- Next item
     }),
    window = {
       completion = cmp.config.window.bordered(),
