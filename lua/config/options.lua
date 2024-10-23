@@ -7,7 +7,7 @@ opt.shiftwidth = 2
 opt.softtabstop = 2
 opt.expandtab = true
 opt.smartindent = true
-opt.wrap = false
+opt.wrap = true
 
 
 -- Search
@@ -23,6 +23,8 @@ opt.termguicolors = true -- Full colors for plugins takign advantage of it
 opt.cmdheight = 1
 opt.scrolloff = 10 -- If 10 lines away from bottom, then start scrolling
 opt.completeopt = "menuone,noinsert,noselect" -- REVIEW THESE LATER
+opt.signcolumn = "yes"
+opt.numberwidth = 1
 
 -- Behavior
 opt.hidden = true -- Edit buffers without having to save`
@@ -37,6 +39,7 @@ opt.mouse:append('a') -- Mouse always available in any mode
 opt.clipboard:append("unnamedplus") -- Allows up to paste copies from outside of vim
 opt.modifiable = true -- You can edit buffer you're in by default
 opt.encoding = "UTF-8"
+opt.completeopt = "menu,menuone,noselect"
 
 
 

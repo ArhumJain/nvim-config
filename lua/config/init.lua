@@ -19,12 +19,28 @@ vim.opt.rtp:prepend(lazypath)
 -- loading lazy.nvim so that mappings are correct.
 -- This is also a good place to setup other settings (vim.opt)
 require('config.globals')
-require('config.keymaps')
 require('config.options')
 
 -- vim.g.mapleader = " "
 -- vim.g.maplocalleader = "\\"
 
+local opts = {
+  defaults = {
+    lazy = true,
+  },
+  rtp = {
+    disabled_plugins = {
+      "gzip",
+      "matchit",
+      "netrw", -- Nvim-tree recommends to disable netrw
+      "netrwPlugin"
+    },
+    change_detection = {
+      notify = true,
+    }
+  }
+}
 -- Setup lazy.nvim
-require("lazy").setup('plugins')
+require("lazy").setup('plugins', opts)
+require('config.keymaps')
 
