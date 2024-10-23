@@ -1,0 +1,3 @@
+[submodule "latex-luasnips"]
+	path = latex-luasnips
+	url = https://github.com/ArhumJain/latex-luasnips.git
