@@ -5,15 +5,16 @@ vim.keymap.set("i", "jj", "<ESC>", { silent = true })
 vim.cmd("nnoremap <expr> j v:count ? 'j' : 'gj'")
 vim.cmd("nnoremap <expr> k v:count ? 'k' : 'gk'")
 
--- Navigation between panes
-vim.keymap.set("n", "<C-h>", "<C-w>h", { noremap = true, silent = true})
-vim.keymap.set("n", "<C-l>", "<C-w>l", { noremap = true, silent = true})
-vim.keymap.set("n", "<C-k>", "<C-w>k", { noremap = true, silent = true})
-vim.keymap.set("n", "<C-j>", "<C-w>j", { noremap = true, silent = true})
+-- Navigation between panes (Uncomment only if vim-tmux-navigator is not used as these override the mappins from that)
+
+-- vim.keymap.set("n", "<C-h>", "<C-w>h", { noremap = true, silent = true})
+-- vim.keymap.set("n", "<C-l>", "<C-w>l", { noremap = true, silent = true})
+-- vim.keymap.set("n", "<C-k>", "<C-w>k", { noremap = true, silent = true})
+-- vim.keymap.set("n", "<C-j>", "<C-w>j", { noremap = true, silent = true})
 
 -- nvim-tree
 vim.keymap.set("n", "<leader>m", ":NvimTreeFocus<CR>", { noremap = true, silent = true})
-vim.keymap.set("n", "<leader>b", ":NvimTreeToggle<CR>", { noremap = true, silent = true})
+vim.keymap.set("n", "<C-b>", ":NvimTreeToggle<CR>", { noremap = true, silent = true})
 
 -- Telescope
 local builtin = require('telescope.builtin')

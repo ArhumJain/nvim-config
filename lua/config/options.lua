@@ -25,6 +25,8 @@ opt.scrolloff = 10 -- If 10 lines away from bottom, then start scrolling
 opt.completeopt = "menuone,noinsert,noselect" -- REVIEW THESE LATER
 opt.signcolumn = "yes"
 opt.numberwidth = 1
+opt.showmode = false -- Since we have lualine, no need to show default mode indicator
+opt.cmdheight = 0
 
 -- Behavior
 opt.hidden = true -- Edit buffers without having to save`
