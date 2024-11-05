@@ -1,3 +1,6 @@
 [submodule "latex-luasnips"]
 	path = latex-luasnips
 	url = https://github.com/ArhumJain/latex-luasnips.git
+[submodule "fonts/codelia-font"]
+	path = fonts/codelia-font
+	url = https://github.com/ArhumJain/codelia-font
