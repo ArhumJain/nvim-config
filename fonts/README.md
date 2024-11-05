@@ -1,0 +1,1 @@
+The repo above is a private repo to the [Codelia](https://tosche.net/fonts/codelia) font set by Toshi Omagari. It is a paid/proprietary font so I have the fonts stored in a private repo, but I would highly recommend you to check the font out!
