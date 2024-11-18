@@ -1,7 +1,4 @@
 local config = function()
-  
-  local lspconfig = require("lspconfig")
-
   local capabilities = require("cmp_nvim_lsp").default_capabilities() -- Every language server from lspconfig has to attach to cmp for autocompletion
 
   -- Latex LSP
@@ -16,8 +13,48 @@ local config = function()
     }
   }
 
+  -- Python LSP
+  local pyrightCapabilities = vim.lsp.protocol.make_client_capabilities()
+  pyrightCapabilities.textDocument.publishDiagnostics.tagSupport.valueSet = { 2 } 
   require("lspconfig").pyright.setup{
+    capabilities = pyrightCapabilities,
+    settings = {
+      pyright = {
+        disableOrganizeImports = true, -- Using Ruff
+      },
+      python = {
+        analysis = {
+          ignore = { '*' }, -- Using Ruff
+          typeCheckingMode = 'off', -- Using mypy
+        },
+      },
+    },
+  }
+
+  -- Lua LSP
+  require("lspconfig").lua_ls.setup{
     capabilities = capabilities,
+  }
+
+  -- C/C++ LSP
+  require("lspconfig").clangd.setup{
+    capabilities = capabilities
+  }
+
+  -- XML
+  require("lspconfig").lemminx.setup {
+    capabilities = capabilities
+  }
+
+  -- Swift setup
+  require("lspconfig").sourcekit.setup{
+    capabilities = {
+      workspace = {
+        didChangeWatchedFiles = {
+            dynamicRegistration = true,
+        },
+      }
+    }
   }
 end
 return {

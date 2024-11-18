@@ -7,7 +7,20 @@ opt.shiftwidth = 2
 opt.softtabstop = 2
 opt.expandtab = true
 opt.smartindent = true
-opt.wrap = true
+opt.wrap = false
+
+vim.api.nvim_create_autocmd("FileType", { -- Enable wrapping and spell check for latex files
+  pattern = "tex",
+  callback = function()
+    vim.opt.wrap = true
+    vim.opt.spell = true
+    -- vim.opt.conceallevel = 2
+    vim.g.tex_superscripts= "[0-9a-zA-W.,:;+-<>/()=]"
+    vim.g.tex_subscripts= "[0-9aehijklmnoprstuvx,+-/().]"
+    vim.g.tex_conceal = "abdgms"
+    vim.g.tex_conceal_frac = 1
+  end
+})
 
 
 -- Search
@@ -27,6 +40,7 @@ opt.signcolumn = "yes"
 opt.numberwidth = 1
 opt.showmode = false -- Since we have lualine, no need to show default mode indicator
 opt.cmdheight = 0
+opt.cursorline = true
 
 -- Behavior
 opt.hidden = true -- Edit buffers without having to save`
