@@ -56,6 +56,11 @@ local config = function()
       }
     }
   }
+  -- Java LSP
+  -- JAVA SETUP IS IN nvim-jdtls.lua FILE
+  require("lspconfig").jdtls.setup{
+    capabilities = capabilities
+  }
 end
 return {
   "neovim/nvim-lspconfig",
@@ -64,5 +69,6 @@ return {
   dependencies = {
     "windwp/nvim-autopairs",
     "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
   }
 }

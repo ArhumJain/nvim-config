@@ -1,10 +1,10 @@
 local config = function()
   require('lualine').setup {
     options = {
-      theme = "sonokai",
+      theme = "nord",
       globalstatus = true,
       -- section_separators = { left = "", right = " "} 
-      section_separators = { left = '', right = ' '},
+      section_separators = { left = '', right = ''},
     },
     sections = {
       lualine_a = {'mode'},
