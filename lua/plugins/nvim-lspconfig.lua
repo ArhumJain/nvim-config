@@ -47,20 +47,21 @@ local config = function()
   }
 
   -- Swift setup
-  require("lspconfig").sourcekit.setup{
-    capabilities = {
-      workspace = {
-        didChangeWatchedFiles = {
-            dynamicRegistration = true,
-        },
-      }
-    }
-  }
+  -- require("lspconfig").sourcekit.setup{
+  --   capabilities = {
+  --     workspace = {
+  --       didChangeWatchedFiles = {
+  --           dynamicRegistration = true,
+  --       },
+  --     }
+  --   }
+  -- }
+
   -- Java LSP
   -- JAVA SETUP IS IN nvim-jdtls.lua FILE
-  require("lspconfig").jdtls.setup{
-    capabilities = capabilities
-  }
+  -- require("lspconfig").jdtls.setup{
+  --   capabilities = capabilities
+  -- }
 end
 return {
   "neovim/nvim-lspconfig",
