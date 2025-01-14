@@ -14,9 +14,8 @@ local config = {
     '--add-modules=ALL-SYSTEM',
     '--add-opens', 'java.base/java.util=ALL-UNNAMED',
     '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
-
-    '-jar', '/Users/arhumjain/.local/share/nvim/mason/packages/jdtls/plugins/org.eclipse.equinox.launcher_1.6.900.v20240613-2009.jar',
-    '-configuration', '/Users/arhumjain/.local/share/nvim/mason/packages/jdtls/config_mac_arm',
+    '-jar', vim.fn.expand("~/.local/share/nvim/mason/packages/jdtls/plugins/org.eclipse.equinox.launcher_1.6.900.v20240613-2009.jar"),
+    '-configuration', vim.fn.expand("~/.local/share/nvim/mason/packages/jdtls/config_mac_arm"),
     '-data', workspace_dir,
   },
   capabilities = capabilities,
