@@ -33,13 +33,11 @@ opt.hlsearch = true -- Highlight search terms
 opt.relativenumber = true
 opt.number = true
 opt.termguicolors = true -- Full colors for plugins takign advantage of it
-opt.cmdheight = 1
+opt.cmdheight = 0
 opt.scrolloff = 10 -- If 10 lines away from bottom, then start scrolling
-opt.completeopt = "menuone,noinsert,noselect" -- REVIEW THESE LATER
 opt.signcolumn = "yes"
 opt.numberwidth = 1
 opt.showmode = false -- Since we have lualine, no need to show default mode indicator
-opt.cmdheight = 0
 opt.cursorline = true
 
 -- Behavior

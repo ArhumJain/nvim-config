@@ -29,13 +29,12 @@ local config = function()
       -- { name = "buffer" }, -- Text within the buffer
       -- { name = "path" }, -- File system paths
     }),
-    
-    cmp.event:on(
-      'confirm_done',
-      cmp_autopairs.on_confirm_done()
-    )
-
   })
+
+  cmp.event:on(
+    'confirm_done',
+    cmp_autopairs.on_confirm_done()
+  )
 end
 
 return {
@@ -44,6 +43,5 @@ return {
   lazy = false,
   dependencies = {
     "hrsh7th/cmp-nvim-lsp",
-    "hrsh7th/cmp-buffer",
   }
 }

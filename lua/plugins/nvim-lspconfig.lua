@@ -1,9 +1,11 @@
 local config = function()
-  local capabilities = require("cmp_nvim_lsp").default_capabilities() -- Every language server from lspconfig has to attach to cmp for autocompletion
+  local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+  -- Set default capabilities for all servers
+  vim.lsp.config('*', { capabilities = capabilities })
 
   -- Latex LSP
-  require("lspconfig").texlab.setup{
-    capabilities = capabilities,
+  vim.lsp.config('texlab', {
     settings = {
       texlab = {
         build = {
@@ -11,12 +13,12 @@ local config = function()
         }
       }
     }
-  }
+  })
 
   -- Python LSP
   local pyrightCapabilities = vim.lsp.protocol.make_client_capabilities()
-  pyrightCapabilities.textDocument.publishDiagnostics.tagSupport.valueSet = { 2 } 
-  require("lspconfig").pyright.setup{
+  pyrightCapabilities.textDocument.publishDiagnostics.tagSupport.valueSet = { 2 }
+  vim.lsp.config('pyright', {
     capabilities = pyrightCapabilities,
     settings = {
       pyright = {
@@ -29,40 +31,20 @@ local config = function()
         },
       },
     },
-  }
+  })
 
   -- Lua LSP
-  require("lspconfig").lua_ls.setup{
-    capabilities = capabilities,
-  }
+  vim.lsp.config('lua_ls', {})
 
   -- C/C++ LSP
-  require("lspconfig").clangd.setup{
-    capabilities = capabilities
-  }
+  vim.lsp.config('clangd', {})
 
   -- XML
-  require("lspconfig").lemminx.setup {
-    capabilities = capabilities
-  }
+  vim.lsp.config('lemminx', {})
 
-  -- Swift setup
-  -- require("lspconfig").sourcekit.setup{
-  --   capabilities = {
-  --     workspace = {
-  --       didChangeWatchedFiles = {
-  --           dynamicRegistration = true,
-  --       },
-  --     }
-  --   }
-  -- }
-
-  -- Java LSP
-  -- JAVA SETUP IS IN nvim-jdtls.lua FILE
-  -- require("lspconfig").jdtls.setup{
-  --   capabilities = capabilities
-  -- }
+  vim.lsp.enable({ 'texlab', 'pyright', 'lua_ls', 'clangd', 'lemminx' })
 end
+
 return {
   "neovim/nvim-lspconfig",
   config = config,

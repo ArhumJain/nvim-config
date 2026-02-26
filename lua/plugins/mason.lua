@@ -1,25 +1,10 @@
 local config = function()
-  -- By mason-lspconfig documenation, load mason first, then mason-lspconfig then setup lspconfig.nvim servers
-  require("mason").setup({
+  -- By mason-lspconfig documentation, load mason first, then mason-lspconfig, then lspconfig servers
+  require("mason").setup({})
+  require("mason-lspconfig").setup({
+    ensure_installed = { "texlab", "pyright", "lua_ls", "clangd", "lemminx" },
+    automatic_installation = true,
   })
-  require("mason-lspconfig").setup()
-  -- local capabilities = require("cmp_nvim_lsp").default_capabilities() -- Every language server from lspconfig has to attach to cmp for autocompletion
-  --
-  -- -- Latex LSP
-  -- require("lspconfig").texlab.setup{
-  --   capabilities = capabilities,
-  --   settings = {
-  --     texlab = {
-  --       build = {
-  --         onSave = true
-  --       }
-  --     }
-  --   }
-  -- }
-  --
-  -- require("lspconfig").pyright.setup{
-  --   capabilities = capabilities,
-  -- }
 end
 
 return {
