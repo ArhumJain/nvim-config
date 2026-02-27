@@ -1,0 +1,2 @@
+custom-shader = cursor_warp.glsl
+adjust-cell-height = 40%

@@ -15,6 +15,10 @@ local config = function()
     }
   })
 
+  -- Matlab LSP
+  vim.lsp.config('matlab_ls', {
+  })
+
   -- Python LSP
   local pyrightCapabilities = vim.lsp.protocol.make_client_capabilities()
   pyrightCapabilities.textDocument.publishDiagnostics.tagSupport.valueSet = { 2 }
