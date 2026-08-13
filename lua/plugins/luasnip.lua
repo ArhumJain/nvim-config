@@ -32,7 +32,7 @@ local config = function()
     include = {"tex"}
   }
 
-  ls.config.setup({ enable_autosnippets = true })
+  ls.config.setup({ enable_autosnippets = true, store_selection_keys = "<Tab>" })
 
   require("luasnip.loaders.from_lua").load(opts)
 

@@ -1,7 +1,7 @@
 local config = function()
   require('lualine').setup {
     options = {
-      theme = "nord",
+      theme = "kanagawa-dragon",
       globalstatus = true,
       -- section_separators = { left = "", right = " "} 
       section_separators = { left = '', right = ''},

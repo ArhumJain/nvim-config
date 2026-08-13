@@ -27,6 +27,9 @@ vim.keymap.set('n', '<C-f>', builtin.current_buffer_fuzzy_find, { desc = 'Telesc
 vim.keymap.set("n", "gi", builtin.lsp_implementations, { desc = "Go to the implementation(s) of the word under the cursor"})
 vim.keymap.set("n", "gr", builtin.lsp_references, { desc = "Search all references of the word under the cursor"})
 vim.keymap.set("n", "gd", builtin.lsp_definitions, { desc = "Go to the definition of the word under the cursor or show all options if there are multiple"})
-
+vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, { desc = 'LSP Rename' })
 -- For my custom MacIpad Autofigure workflow in LaTeX
 -- vim.keymap.set("n", "<C-f>", require("macipad-autofigure").create_figure)
+
+-- For TeXpresso
+vim.keymap.set('n', '<leader>pdf', '<cmd>TeXpresso %<CR>', { desc = 'Run TeXpresso on current file' })

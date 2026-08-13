@@ -22,7 +22,6 @@ vim.api.nvim_create_autocmd("FileType", { -- Enable wrapping and spell check for
   end
 })
 
-
 -- Search
 opt.incsearch = true
 opt.ignorecase = true -- When searching, highlight uppercase as well even if entry is lower
@@ -39,6 +38,7 @@ opt.signcolumn = "yes"
 opt.numberwidth = 1
 opt.showmode = false -- Since we have lualine, no need to show default mode indicator
 opt.cursorline = true
+opt.wrap = true
 
 -- Behavior
 opt.hidden = true -- Edit buffers without having to save`
@@ -54,6 +54,7 @@ opt.clipboard:append("unnamedplus") -- Allows up to paste copies from outside of
 opt.modifiable = true -- You can edit buffer you're in by default
 opt.encoding = "UTF-8"
 opt.completeopt = "menu,menuone,noselect"
+opt.autoread = true
 
 
 

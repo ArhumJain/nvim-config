@@ -11,5 +11,5 @@ local config = function()
 })
 end
 return {
-  'nvim-telescope/telescope.nvim', config = config, lazy=false, tag="0.1.8", dependencies = { "nvim-lua/plenary.nvim" }
+  'nvim-telescope/telescope.nvim', config = config, lazy=false, dependencies = { "nvim-lua/plenary.nvim" }
 }

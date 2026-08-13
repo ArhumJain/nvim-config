@@ -1,2 +1,5 @@
-custom-shader = cursor_warp.glsl
+# custom-shader = cursor_warp.glsl
 adjust-cell-height = 40%
+shell-integration-features = ssh-terminfo,ssh-env
+theme = Kanagawa Dragon
+œ
