@@ -1,8 +1,1 @@
-local config = function()
-end
-
-return {
-    "let-def/texpresso.vim",
-    config = config,
-    lazy = false,
-}
+vim.keymap.set("n", "<leader>pdf", "<cmd>TeXpresso %<CR>", { desc = "Run TeXpresso on current file" })
